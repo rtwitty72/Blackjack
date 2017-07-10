@@ -8,31 +8,23 @@
    you'll need to parse through that first before you can start to
    write your logic.
 */
-var draw = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'K', 'Q'];
-var hand = [0];
-var NewCard = 0;
-
-function handValue (hand){
-  var array = hand.parseIn();
-}
-
-  var Newhand = handValue + draw;
-   for (var i = 0; i < hand; i++) {
-     array =
-    if (var draw is === K | Q | J | 10);
-    hand + 10;
-
-    else if(var draw === 1);
-    hand + 1;
-
-
-    //else if (draw == A) {
-
+function handValue (hand) {
+  var total = 0;
+  for (var i = 0; i < hand.length; i++) {
+    if (hand[i] === 'K' || hand[i] === 'Q' || hand[i] === 'J') {
+        hand[i] = '10';
+      }
+    if (hand[i] === 'A'){
+      if (hand.length > 2) {
+        hand[i] = '1';
+      } else{
+        hand[i] = '11';
+      }
     }
-
-  return;
+  total = parseInt(hand[i]) + total;
 }
-
+  return total;
+}
 
 /* -----  Hints ------
 
